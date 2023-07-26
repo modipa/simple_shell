@@ -8,24 +8,23 @@
  */
 int count_words(const char *str)
 {
-    int count = 0;
-    int is_word = 0;
+int count = 0;
+int is_word = 0;
 
-    while (*str != '\0')
-    {
-        if (*str == ' ' || *str == '\t' || *str == '\n')
-        {
-            is_word = 0;
-        }
-        else if (!is_word)
-        {
-            is_word = 1;
-            count++;
-        }
-        str++;
-    }
-
-    return count;
+while (*str != '\0')
+{
+if (*str == ' ' || *str == '\t' || *str == '\n')
+{
+is_word = 0;
+}
+else if (!is_word)
+{
+is_word = 1;
+count++;
+}
+str++;
+}
+return count;
 }
 
 /**
@@ -34,14 +33,14 @@ int count_words(const char *str)
  */
 void reverse_string(char *str)
 {
-    int len = strlen(str);
-    int i, j;
-    char temp;
+int len = strlen(str);
+int i, j;
+char temp;
 
-    for (i = 0, j = len - 1; i < j; i++, j--)
-    {
-        temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
-    }
+for (i = 0, j = len - 1; i < j; i++, j--)
+{
+temp = str[i];
+str[i] = str[j];
+str[j] = temp;
+}
 }
